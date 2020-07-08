@@ -1,0 +1,30 @@
+h1 {
+  color: black;
+  font-size: 3em;
+  font-weight: 700;
+  word-break: keep-all;
+  line-height: 1.3em;
+  margin-top: 0.25em;
+  margin-bottom: 0.5em;
+  margin-left: -3px;
+  letter-spacing: -0.04em;
+}
+
+.title {
+  margin-top: 40px;
+}
+
+.writer {
+  font-size: 0.9em;
+  color: #676b72;
+}
+
+.contents {
+  margin-top: 40px;
+}
+.utility {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}

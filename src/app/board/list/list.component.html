@@ -1,0 +1,28 @@
+<table>
+  <div class="utility">
+    <span class="utility__title">Angular로 만든 CRUD</span>
+    <a [routerLink]="['/editor', { type: 0 }]" class="blue-button">글쓰기</a>
+  </div>
+  <tr class="item" *ngFor="let item of items; index as i;">
+    <span class="item__id">
+      {{items.length - i}}
+    </span>
+    <div class="item__right">
+      <span class="item__title" (click)="onClick(item.id)">
+        {{item.title}}
+      </span>
+      <div class="item__right-down">
+        <span class="item__writer">
+          {{item.writer}}
+        </span>
+        <span class="item__time">
+          {{item.diff[0] == 0 ? item.diff[1] + '시간 전' : item.diff[0] + '일 전'}}
+        </span>
+        <span class="item__views">
+          {{item.views}}
+        </span>
+      </div>
+    </div>
+  </tr>
+</table>
+
