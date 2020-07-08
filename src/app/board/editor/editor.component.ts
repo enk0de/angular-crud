@@ -6,7 +6,16 @@ import EditorType from './editor.type';
 
 @Component({
   selector: 'app-editor',
-  templateUrl: './editor.component.html',
+  template: `
+    <label>
+      <div class="top">
+        <input class="top__title-input" placeholder="제목" [(ngModel)]="title">
+        <input class="top__writer-input" placeholder="작성자" [(ngModel)]="writer">
+      </div>
+      <textarea [(ngModel)]="contents"></textarea>
+      <a class="blue-button" (click)="onSubmit()">등록</a>
+    </label>
+  `,
   styleUrls: ['./editor.component.scss']
 })
 export class EditorComponent implements OnInit {

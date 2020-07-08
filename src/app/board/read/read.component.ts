@@ -5,7 +5,15 @@ import { Item } from '../item';
 
 @Component({
   selector: 'app-read',
-  templateUrl: './read.component.html',
+  template: `
+    <h1 class="title">{{ item?.title }}</h1>
+    <span class="writer">{{ item?.writer }}</span>
+    <markdown [data]="item?.contents"></markdown>
+    <div class="utility">
+      <a [routerLink]="['/editor', { type: 1, id: item?.id }]" class="blue-button">수정</a>
+      <a [routerLink]="['/']" class="blue-button">목록</a>
+    </div>
+  `,
   styleUrls: ['./read.component.scss']
 })
 export class ReadComponent implements OnInit {
